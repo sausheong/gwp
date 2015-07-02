@@ -46,6 +46,6 @@ func main() {
 	http.HandleFunc("/write", writeExample)
 	http.HandleFunc("/writeheader", writeHeaderExample)
 	http.HandleFunc("/redirect", headerExample)
-	http.HandleFunc("/json", headerExample)
+	http.HandleFunc("/json", jsonExample)
 	server.ListenAndServe()
 }
