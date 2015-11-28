@@ -9,8 +9,11 @@ import (
 	"log"
 )
 
-func db() (database *sql.DB) {
-	database, err := sql.Open("postgres", "dbname=chitchat sslmode=disable")
+var Db *sql.DB
+
+func init() {
+	var err error
+	Db, err = sql.Open("postgres", "dbname=chitchat sslmode=disable")
 	if err != nil {
 		log.Fatal(err)
 	}

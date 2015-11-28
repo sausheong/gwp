@@ -1,10 +1,10 @@
 package main
 
 import (
-	"chitchat/data"
 	"encoding/json"
 	"errors"
 	"fmt"
+	"github.com/sausheong/gwp/Chapter_2_Go_ChitChat/chitchat/data"
 	"html/template"
 	"log"
 	"net/http"

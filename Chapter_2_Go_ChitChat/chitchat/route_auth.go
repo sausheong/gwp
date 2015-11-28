@@ -1,14 +1,13 @@
 package main
 
 import (
-	"chitchat/data"
+	"github.com/sausheong/gwp/Chapter_2_Go_ChitChat/chitchat/data"
 	"net/http"
 )
 
 // GET /login
 // Show the login page
 func login(writer http.ResponseWriter, request *http.Request) {
-
 	t := parseTemplateFiles("login.layout", "public.navbar", "login")
 	t.Execute(writer, nil)
 }
