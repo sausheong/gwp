@@ -1,0 +1,23 @@
+echo "CREATE POST"
+echo "-----------"
+curl -i -X POST -H "Content-Type: application/json"  -d '{"content":"My first post","author":"Sau Sheong"}' http://ws-h.herokuapp.com/post/
+
+echo
+echo "RETRIEVE POST"
+echo "-------------"
+
+curl -i -X GET http://ws-h.herokuapp.com/post/1
+
+echo
+echo
+echo "UPDATE POST"
+echo "-----------"
+
+curl -i -X PUT -H "Content-Type: application/json"  -d '{"content":"Updated post","author":"Sau Sheong"}' http://ws-h.herokuapp.com/post/1
+
+echo
+echo "DELETE POST"
+echo "-----------"
+
+
+curl -i -X DELETE http://ws-h.herokuapp.com/post/1

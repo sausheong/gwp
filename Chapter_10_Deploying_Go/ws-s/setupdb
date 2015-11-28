@@ -1,0 +1,1 @@
+psql -h babar.elephantsql.com -U qjnqlnxs -f setup.sql

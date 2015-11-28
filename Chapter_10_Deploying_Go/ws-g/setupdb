@@ -1,0 +1,4 @@
+mysql --host=2001:4860:4864:1:8a81:c075:4e26:8991 --user=gwp --password=gwp123 gwp < setup.sql
+
+
+
