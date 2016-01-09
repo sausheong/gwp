@@ -29,6 +29,7 @@ func Posts(limit int) (posts []Post, err error) {
 	if err != nil {
 		return
 	}
+	defer rows.Close()
 	for rows.Next() {
 		post := Post{}
 		err = rows.Scan(&post.Id, &post.Content, &post.Author)
@@ -37,7 +38,6 @@ func Posts(limit int) (posts []Post, err error) {
 		}
 		posts = append(posts, post)
 	}
-	rows.Close()
 	return
 }
 

@@ -51,6 +51,7 @@ func GetPost(id int) (post Post, err error) {
 	if err != nil {
 		return
 	}
+	defer rows.Close()
 	for rows.Next() {
 		comment := Comment{Post: &post}
 		err = rows.Scan(&comment.Id, &comment.Content, &comment.Author)
@@ -59,7 +60,6 @@ func GetPost(id int) (post Post, err error) {
 		}
 		post.Comments = append(post.Comments, comment)
 	}
-	rows.Close()
 	return
 }
 
