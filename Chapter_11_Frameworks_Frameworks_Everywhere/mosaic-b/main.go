@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "github.com/sausheong/mosaic-b/routers"
-	"github.com/sausheong/mosaic-b/mosaic"
+	_ "github.com/sausheong/gwp/Chapter_11_Frameworks_Frameworks_Everywhere/mosaic-b/routers"
+	"github.com/sausheong/gwp/Chapter_11_Frameworks_Frameworks_Everywhere/mosaic-b/mosaic"
 	"github.com/astaxie/beego"
 )
 

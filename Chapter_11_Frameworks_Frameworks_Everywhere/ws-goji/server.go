@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/sausheong/ws-goji/post"
+	"github.com/sausheong/gwp/Chapter_11_Frameworks_Frameworks_Everywhere/ws-goji/post"
 	"github.com/zenazn/goji"
 
 )

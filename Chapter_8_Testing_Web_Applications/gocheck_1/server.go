@@ -67,9 +67,9 @@ func handleGet(w http.ResponseWriter, r *http.Request, post Text) (err error) {
 	if err != nil {
 		return
 	}
-  w.Header().Set("Content-Type", "application/json")
-  w.Write(output)
-  http.NotFound(w, r)
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(output)
+	http.NotFound(w, r)
 	return
 }
 
