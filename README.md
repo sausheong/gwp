@@ -9,6 +9,9 @@ This is the code repository for the Go Web Programming book
 - Install [dep](https://github.com/golang/dep) `brew install dep`
 
 ## Setup
+- set your [gopath](https://golang.org/doc/code.html#GOPATH) (e.g. `export GOPATH=$HOME/code/go`)
+- clone this git repo into $GOPATH/github.com/sausheong/gwp `git clone https://github.com/sausheong/gwp $GOPATH/github.com/sausheong/gwp`
+- cd $GOPATH/github.com/sausheong/gwp
 - run `dep ensure`
 - run `go build ./...`
 - run `go test ./...`
