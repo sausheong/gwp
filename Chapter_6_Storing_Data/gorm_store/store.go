@@ -23,7 +23,7 @@ type Comment struct {
 	CreatedAt time.Time
 }
 
-var Db gorm.DB
+var Db *gorm.DB
 
 // connect to the Db
 func init() {

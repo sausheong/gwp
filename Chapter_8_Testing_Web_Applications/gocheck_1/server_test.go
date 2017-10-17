@@ -25,6 +25,9 @@ func (s *PostTestSuite) TestHandleGet(c *C) {
 
 	c.Check(writer.Code, Equals, 200)
 	var post Post
-	json.Unmarshal(writer.Body.Bytes(), &post)
+	err := json.NewDecoder(writer.Body).Decode(&post)
+	if(err != nil) {
+		panic(err)
+	}
 	c.Check(post.Id, Equals, 1)
 }
