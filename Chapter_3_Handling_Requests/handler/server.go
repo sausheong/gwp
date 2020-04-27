@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// MyHandler is a handler
 type MyHandler struct{}
 
 func (h *MyHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {

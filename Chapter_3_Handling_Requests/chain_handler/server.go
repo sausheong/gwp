@@ -5,6 +5,7 @@ import (
 	"net/http"
 )
 
+// HelloHandler is a handler
 type HelloHandler struct{}
 
 func (h HelloHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
