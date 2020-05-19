@@ -136,11 +136,11 @@ func mosaic(w http.ResponseWriter, r *http.Request) {
 	buf1 := new(bytes.Buffer)
 	jpeg.Encode(buf1, original, nil)
 	originalStr := base64.StdEncoding.EncodeToString(buf1.Bytes())
-
+	mosaicStr := <- c
 	t1 := time.Now()
 	images := map[string]string{
 		"original": originalStr,
-		"mosaic":   <-c,
+		"mosaic":   mosaicStr,
 		"duration": fmt.Sprintf("%v ", t1.Sub(t0)),
 	}
 
