@@ -29,8 +29,11 @@ func createUUID() (uuid string) {
 		log.Fatalln("Cannot generate UUID", err)
 	}
 
-	// 0x40 is reserved variant from RFC 4122
-	u[8] = (u[8] | 0x40) & 0x7F
+	// From RFC 4122. Set the two most significant bits
+	// (bits 6 and 7) of the clock_seq_hi_and_reserved to
+	// zero and one, respectively.
+	u[8] = (u[8] & 0x3f) | 0x80
+
 	// Set the four most significant bits (bits 12 through 15) of the
 	// time_hi_and_version field to the 4-bit version number.
 	u[6] = (u[6] & 0xF) | (0x4 << 4)
