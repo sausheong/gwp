@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/sausheong/gwp/Chapter_2_Go_ChitChat/chitchat/data"
 	"net/http"
+
+	"github.com/cin-chan/gwp/Chapter_2_Go_ChitChat/chitchat/data"
 )
 
 // GET /login
@@ -59,7 +60,6 @@ func authenticate(writer http.ResponseWriter, request *http.Request) {
 	} else {
 		http.Redirect(writer, request, "/login", 302)
 	}
-
 }
 
 // GET /logout

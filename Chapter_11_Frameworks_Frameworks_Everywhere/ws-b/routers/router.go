@@ -7,19 +7,19 @@
 // @LicenseUrl http://www.apache.org/licenses/LICENSE-2.0.html
 package routers
 
-import (
-	"github.com/sausheong/ws-b/controllers"
+// import (
+// 	"github.com/sausheong/ws-b/controllers"
 
-	"github.com/astaxie/beego"
-)
+// 	"github.com/astaxie/beego"
+// )
 
-func init() {
-	ns := beego.NewNamespace("/v1",
-		beego.NSNamespace("/post",
-			beego.NSInclude(
-				&controllers.PostController{},
-			),
-		),
-	)
-	beego.AddNamespace(ns)
-}
+// func init() {
+// 	ns := beego.NewNamespace("/v1",
+// 		beego.NSNamespace("/post",
+// 			beego.NSInclude(
+// 				&controllers.PostController{},
+// 			),
+// 		),
+// 	)
+// 	beego.AddNamespace(ns)
+// }
