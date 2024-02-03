@@ -1,6 +1,6 @@
 # Start from a Debian image with the latest version of Go installed
 # and a workspace (GOPATH) configured at /go.
-FROM golang
+FROM golang:1.22rc2-bookworm
 
 # Copy the local package files to the container's workspace.
 ADD . /go/src/github.com/sausheong/ws-d
